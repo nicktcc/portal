@@ -3,91 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Service Portal</title>
+  <title>Portal - Home</title>
   <style>
-    :root{--accent:#0078d4;--muted:#666}
-    body{font-family:Segoe UI,Arial,sans-serif;margin:0;color:#222}
-    header{background:linear-gradient(90deg,#f6f9fc,#fff);border-bottom:1px solid #e6eef8}
-    .container{max-width:1000px;margin:0 auto;padding:20px}
-    nav{display:flex;justify-content:space-between;align-items:center}
-    .brand{font-weight:700;color:var(--accent)}
-    .nav-links a{margin-left:16px;color:var(--muted);text-decoration:none}
-    .hero{padding:48px 0;display:flex;gap:30px;align-items:center}
-    .hero .intro h1{margin:0 0 8px;font-size:28px}
-    .hero .intro p{margin:0;color:var(--muted)}
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0}
-    .card{background:#fff;border:1px solid #e6eef8;padding:16px;border-radius:8px}
-    .card h3{margin:0 0 8px}
-    .quick{display:flex;gap:8px;margin-top:12px}
-    .btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none}
-    footer{padding:20px 0;color:var(--muted);font-size:13px;border-top:1px solid #eef4fb}
-    @media (max-width:560px){.hero{flex-direction:column;align-items:flex-start}}
+    body { font-family: Arial, sans-serif; margin:0; }
+    header { background:#0366d6; color:#fff; padding:12px 20px; }
+    .nav { display:flex; align-items:center; gap:16px; }
+    .brand { font-weight:700; margin-right:20px; }
+    .nav a { color:rgba(255,255,255,0.9); text-decoration:none; padding:8px 10px; border-radius:4px; }
+    .nav a:hover { background:rgba(255,255,255,0.08); }
+    .nav a.active { background:rgba(255,255,255,0.18); }
+    main { padding:24px; }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <nav>
-        <div class="brand">Service Portal</div>
-        <div class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#requests">Requests</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="brand">Portal</div>
+      <a href="home.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="settings.html">Settings</a>
+      <div style="margin-left:auto">
+        <a href="login.html">Log in</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="intro">
-        <h1>Welcome to the Service Portal</h1>
-        <p>Your central place to request help, view services, and track progress.</p>
-        <div style="margin-top:12px">
-          <a class="btn" href="#requests">Create a Request</a>
-          <a class="btn" style="background:#6c757d;margin-left:8px" href="#services">Browse Services</a>
-        </div>
-      </div>
-      <div style="flex:1">
-        <div class="card">
-          <h3>Quick Status</h3>
-          <p style="margin:0;color:var(--muted)">No open requests. Use the button to submit a new request or check service updates.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <h2 style="margin-top:0">Services</h2>
-      <div class="services">
-        <div class="card">
-          <h3>IT Support</h3>
-          <p class="muted">Report issues, request software, or reset passwords.</p>
-          <div class="quick"><a class="btn" href="#">Request</a><a href="#" style="align-self:center;color:var(--muted)">Learn more</a></div>
-        </div>
-        <div class="card">
-          <h3>Facilities</h3>
-          <p class="muted">Submit maintenance or access requests.</p>
-          <div class="quick"><a class="btn" href="#">Request</a><a href="#" style="align-self:center;color:var(--muted)">Learn more</a></div>
-        </div>
-        <div class="card">
-          <h3>HR & Payroll</h3>
-          <p class="muted">Benefits, time off, and payroll inquiries.</p>
-          <div class="quick"><a class="btn" href="#">Request</a><a href="#" style="align-self:center;color:var(--muted)">Learn more</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p style="margin:0">Email: support@example.com</p>
-        <p style="margin:0">Phone: (555) 555-0100</p>
-      </div>
-    </section>
+  <main>
+    <h1>Welcome to the Portal</h1>
+    <p>Use the navigation above to move between sections.</p>
   </main>
-
-  <footer>
-    <div class="container">© Your Organization — Service Portal</div>
-  </footer>
 </body>
 </html>
